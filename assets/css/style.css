@@ -3,4 +3,39 @@
   position: absolute;
   bottom: 0;
   top: 0;
+  z-index: 9999999;
+}
+
+/* table */
+#myTable_wrapper {
+  background-color: transparent !important;
+  overflow-x: scroll;
+}
+#myTable {
+  background-color: white !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  padding: 5px 10px;
+  background-color: #fff;
+  /* border: 1px solid #6c5dd3 !important; */
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.disabled {
+  background: #d5d4d4 !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  background: transparent !important;
+  background-color: #fff !important;
+  border: 1px solid #6c5dd3 !important;
+  width: 35px !important;
+}
+.sorting::before,
+.sorting::after {
+  display: none !important;
 }

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page - Nexus</title>
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/js/tailwind.config.js"></script>
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Jquery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <!-- #006169 -->
+    <div class="flex w-full h-full">
+      <!-- Sidebar -->
+      <div
+        class="sidebar bg-[#006169] min-h-screen w-[250px] lg:w-[350px] hidden lg:flex flex-col items-center pt-10 p-5"
+      >
+        <img
+          src="./assets/img/logo.svg"
+          class="w-20 h-20 block object-contain"
+          alt=""
+        />
+        <div class="mt-5 w-full">
+          <select
+            name=""
+            id=""
+            class="w-full p-2 rounded-md focus:outline-none"
+          >
+            <option>Select a category</option>
+            <option>Data One</option>
+            <option>Data Two</option>
+          </select>
+          <button
+            class="text-white h-14 w-full font-bold text-sm rounded-xl mt-9 focus:outline-none border border-white transition-all duration-300 flex items-center gap-4 px-5"
+            style="
+              background: linear-gradient(180deg, #006169 0%, #0f97d7 100%);
+            "
+          >
+            <img src="./assets/img/activity_icon.svg" alt="" />
+            KPIS
+          </button>
+
+          <button
+            class="text-white h-14 w-full font-bold text-sm rounded-xl mt-9 focus:outline-none transition-all duration-300 flex items-center gap-4 px-5"
+          >
+            <img src="./assets/img/chart.svg" alt="" />
+            Administrator
+          </button>
+        </div>
+      </div>
+      <!-- Main Content -->
+      <div class="w-full bg-[#F5F5F5]">
+        <!-- Navbar -->
+        <div
+          class="bg-[#006169] w-full h-20 flex items-center justify-between px-5 lg:border-l border-white"
+        >
+          <!-- Name and Desc  -->
+          <div class="">
+            <p class="text-white font-bold text-2xl">John Doe</p>
+            <p class="hidden lg:block text-sm text-[#CDCDCD]">
+              Let’s check your store today
+            </p>
+          </div>
+          <!-- Right Div -->
+          <div class="flex items-center gap-5">
+            <div class="hidden lg:flex items-center relative">
+              <img
+                src="./assets/img/search.svg"
+                class="absolute left-2"
+                alt=""
+              />
+              <input
+                type="text"
+                class="h-12 w-[300px] rounded-lg placeholder:text-[#333] pl-10 focus:outline-none"
+                placeholder="Search..."
+              />
+            </div>
+            <div class="hidden lg:flex items-center gap-5">
+              <img
+                src="./assets/img/email.png"
+                alt=""
+                class="w-10 h-10 block object-contain rounded-full"
+              />
+
+              <img
+                src="./assets/img/bell.png"
+                alt=""
+                class="w-10 h-10 block object-contain rounded-full"
+              />
+            </div>
+            <!-- Image Box -->
+            <div
+              class="flex items-center gap-5 lg:border-l border-white pl-[43px]"
+            >
+              <img
+                src="assets/img/user.png"
+                alt=""
+                class="w-10 h-10 block object-contain"
+              />
+              <div class="">
+                <p class="text-white font-bold text-sm">John Doe</p>
+                <p class="text-xs text-[#CDCDCD]">KATRING</p>
+              </div>
+            </div>
+            <button
+              class="bg-white w-10 h-10 rounded-md block lg:hidden"
+              id="menu"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Main Content -->
+
+        <div class="p-5">
+          <div class="bg-white p-6">
+            <p class="text-2xl font-semibold">Forms</p>
+            <p class="text-xl font-medium my-5">Add User</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-[#2B3241] text-sm">First Name</label>
+                <input
+                  type="text"
+                  class="w-full border border-[#AAB3C3] h-12 placeholder:text-[#AAB3C3] px-2 focus:outline-none rounded-lg text-black bg-[#F8F8F8]"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-[#2B3241] text-sm">Last Name</label>
+                <input
+                  type="text"
+                  class="w-full border border-[#AAB3C3] h-12 placeholder:text-[#AAB3C3] px-2 focus:outline-none rounded-lg text-black bg-[#F8F8F8]"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-[#2B3241] text-sm"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  class="w-full border border-[#AAB3C3] h-12 placeholder:text-[#AAB3C3] px-2 focus:outline-none rounded-lg text-black bg-[#F8F8F8]"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-[#2B3241] text-sm">Type</label>
+                <select
+                  name=""
+                  id=""
+                  class="w-full border border-[#AAB3C3] h-12 placeholder:text-[#AAB3C3] px-2 focus:outline-none rounded-lg text-black bg-[#F8F8F8]"
+                >
+                  <option>Select a category</option>
+                  <option>Data One</option>
+                  <option>Data Two</option>
+                </select>
+              </div>
+              <div class="flex flex-col gap-2 lg:col-span-2">
+                <label for="" class="text-[#2B3241] text-sm">Contractor</label>
+                <select
+                  name=""
+                  id=""
+                  class="w-full border border-[#AAB3C3] h-12 placeholder:text-[#AAB3C3] px-2 focus:outline-none rounded-lg text-black bg-[#F8F8F8]"
+                >
+                  <option>Select a category</option>
+                  <option>Data One</option>
+                  <option>Data Two</option>
+                </select>
+              </div>
+            </div>
+            <button
+              style="
+                background: linear-gradient(180deg, #006169 0%, #0f97d7 100%);
+              "
+              class="h-14 w-28 rounded-md mt-3 text-sm hover:bg-[#017DB7] text-white transition-all duration-300"
+            >
+              Submit
+            </button>
+
+            <p class="text-xl font-medium my-5">Project Details</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-[#2B3241] text-sm"
+                  >Project Name</label
+                >
+                <input
+                  type="text"
+                  class="w-full border border-[#AAB3C3] h-12 placeholder:text-[#AAB3C3] px-2 focus:outline-none rounded-lg text-black bg-[#F8F8F8]"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-[#2B3241] text-sm">Project ID</label>
+                <input
+                  type="text"
+                  class="w-full border border-[#AAB3C3] h-12 placeholder:text-[#AAB3C3] px-2 focus:outline-none rounded-lg text-black bg-[#F8F8F8]"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-[#2B3241] text-sm">Location</label>
+                <input
+                  type="text"
+                  class="w-full border border-[#AAB3C3] h-12 placeholder:text-[#AAB3C3] px-2 focus:outline-none rounded-lg text-black bg-[#F8F8F8]"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-[#2B3241] text-sm"
+                  >Project Phase</label
+                >
+                <input
+                  type="text"
+                  class="w-full border border-[#AAB3C3] h-12 placeholder:text-[#AAB3C3] px-2 focus:outline-none rounded-lg text-black bg-[#F8F8F8]"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-[#2B3241] text-sm">Start Date</label>
+                <input
+                  type="date"
+                  class="w-full border border-[#AAB3C3] h-12 placeholder:text-[#AAB3C3] px-2 focus:outline-none rounded-lg text-black bg-[#F8F8F8]"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-[#2B3241] text-sm">End Date</label>
+                <input
+                  type="date"
+                  class="w-full border border-[#AAB3C3] h-12 placeholder:text-[#AAB3C3] px-2 focus:outline-none rounded-lg text-black bg-[#F8F8F8]"
+                />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 mt-5">
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-[#2B3241] text-sm">LTR Min</label>
+                <input
+                  type="text"
+                  class="w-full border border-[#AAB3C3] h-12 placeholder:text-[#AAB3C3] px-2 focus:outline-none rounded-lg text-black bg-[#F8F8F8]"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-[#2B3241] text-sm">TRIR Min</label>
+                <input
+                  type="text"
+                  class="w-full border border-[#AAB3C3] h-12 placeholder:text-[#AAB3C3] px-2 focus:outline-none rounded-lg text-black bg-[#F8F8F8]"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-[#2B3241] text-sm">DART Min</label>
+                <input
+                  type="text"
+                  class="w-full border border-[#AAB3C3] h-12 placeholder:text-[#AAB3C3] px-2 focus:outline-none rounded-lg text-black bg-[#F8F8F8]"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-[#2B3241] text-sm">LTR Max</label>
+                <input
+                  type="text"
+                  class="w-full border border-[#AAB3C3] h-12 placeholder:text-[#AAB3C3] px-2 focus:outline-none rounded-lg text-black bg-[#F8F8F8]"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-[#2B3241] text-sm">TRIR Max</label>
+                <input
+                  type="text"
+                  class="w-full border border-[#AAB3C3] h-12 placeholder:text-[#AAB3C3] px-2 focus:outline-none rounded-lg text-black bg-[#F8F8F8]"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-[#2B3241] text-sm">DART Max</label>
+                <input
+                  type="text"
+                  class="w-full border border-[#AAB3C3] h-12 placeholder:text-[#AAB3C3] px-2 focus:outline-none rounded-lg text-black bg-[#F8F8F8]"
+                />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-5">
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-[#2B3241] text-sm"
+                  >KPI Multiplier</label
+                >
+                <select
+                  name=""
+                  id=""
+                  class="w-full border border-[#AAB3C3] h-12 placeholder:text-[#AAB3C3] px-2 focus:outline-none rounded-lg text-black bg-[#F8F8F8]"
+                >
+                  <option>Select a category</option>
+                  <option>Data One</option>
+                  <option>Data Two</option>
+                </select>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-5">
+              <img src="./assets/img/upload.png" alt="" />
+            </div>
+            <button
+              style="
+                background: linear-gradient(180deg, #006169 0%, #0f97d7 100%);
+              "
+              class="h-14 w-28 rounded-md mt-3 text-sm hover:bg-[#017DB7] text-white transition-all duration-300"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tailwindcss Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          theme: {
+            extends: {
+              screens: {
+                sm: "640px",
+                // => @media (min-width: 640px) { ... }
+
+                md: "768px",
+                // => @media (min-width: 768px) { ... }
+
+                lg: "1024px",
+                // => @media (min-width: 1024px) { ... }
+
+                xl: "1280px",
+                // => @media (min-width: 1280px) { ... }
+
+                "2xl": "1536px",
+                // => @media (min-width: 1536px) { ... }
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <!-- JS File -->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

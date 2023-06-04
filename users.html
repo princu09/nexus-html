@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page - Nexus</title>
+    <!-- Tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/js/tailwind.config.js"></script>
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Jquery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Data Table -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css"
+    />
+
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="flex w-full h-full">
+      <!-- Sidebar -->
+      <div
+        class="sidebar bg-[#006169] min-h-screen w-[250px] lg:w-[350px] hidden lg:flex flex-col items-center pt-10 p-5"
+      >
+        <img
+          src="./assets/img/logo.svg"
+          class="w-20 h-20 block object-contain"
+          alt=""
+        />
+        <div class="mt-5 w-full">
+          <select
+            name=""
+            id=""
+            class="w-full p-2 rounded-md focus:outline-none"
+          >
+            <option>Select a category</option>
+            <option>Data One</option>
+            <option>Data Two</option>
+          </select>
+          <button
+            class="text-white h-14 w-full font-bold text-sm rounded-xl mt-9 focus:outline-none border border-white transition-all duration-300 flex items-center gap-4 px-5"
+            style="
+              background: linear-gradient(180deg, #006169 0%, #0f97d7 100%);
+            "
+          >
+            <img src="./assets/img/activity_icon.svg" alt="" />
+            KPIS
+          </button>
+
+          <button
+            class="text-white h-14 w-full font-bold text-sm rounded-xl mt-9 focus:outline-none transition-all duration-300 flex items-center gap-4 px-5"
+          >
+            <img src="./assets/img/chart.svg" alt="" />
+            Administrator
+          </button>
+        </div>
+      </div>
+      <!-- Main Content -->
+      <div class="w-full bg-[#F2F4FC]">
+        <!-- Navbar -->
+        <div
+          class="bg-[#006169] w-full h-20 flex items-center justify-between px-5 lg:border-l border-white"
+        >
+          <!-- Name and Desc  -->
+          <div class="">
+            <p class="text-white font-bold text-2xl">John Doe</p>
+            <p class="hidden lg:block text-sm text-[#CDCDCD]">
+              Let’s check your store today
+            </p>
+          </div>
+          <!-- Right Div -->
+          <div class="flex items-center gap-5">
+            <div class="hidden lg:flex items-center relative">
+              <img
+                src="./assets/img/search.svg"
+                class="absolute left-2"
+                alt=""
+              />
+              <input
+                type="text"
+                class="h-12 w-[300px] rounded-lg placeholder:text-[#333] pl-10 focus:outline-none"
+                placeholder="Search..."
+              />
+            </div>
+            <div class="hidden lg:flex items-center gap-5">
+              <img
+                src="./assets/img/email.png"
+                alt=""
+                class="w-10 h-10 block object-contain rounded-full"
+              />
+
+              <img
+                src="./assets/img/bell.png"
+                alt=""
+                class="w-10 h-10 block object-contain rounded-full"
+              />
+            </div>
+            <!-- Image Box -->
+            <div
+              class="flex items-center gap-5 lg:border-l border-white pl-[43px]"
+            >
+              <img
+                src="assets/img/user.png"
+                alt=""
+                class="w-10 h-10 block object-contain"
+              />
+              <div class="">
+                <p class="text-white font-bold text-sm">John Doe</p>
+                <p class="text-xs text-[#CDCDCD]">KATRING</p>
+              </div>
+            </div>
+            <button
+              class="bg-white w-10 h-10 rounded-md block lg:hidden"
+              id="menu"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Main Content -->
+
+        <div class="p-5">
+          <div class="bg-white">
+            <div class="p-6 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <p class="text-2xl font-semibold">Clients List</p>
+              </div>
+              <div class="">
+                <div
+                  class="border rounded-lg bg-[#FAFAFA] flex items-center relative"
+                >
+                  <img
+                    src="./assets/img/search.svg"
+                    class="absolute left-2"
+                    alt=""
+                  />
+                  <input
+                    type="text"
+                    class="h-12 lg:w-[300px] rounded-lg placeholder:text-[#333] pl-10 focus:outline-none"
+                    placeholder="Search..."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <table id="myTable" class="display">
+            <thead>
+              <tr>
+                <th>
+                  <span class="flex items-center gap-2 cursor-pointer"
+                    >Date <img src="./assets/img/sorting.svg" alt=""
+                  /></span>
+                </th>
+                <th>
+                  <span class="flex items-center gap-2 cursor-pointer"
+                    >Name <img src="./assets/img/sorting.svg" alt=""
+                  /></span>
+                </th>
+                <th>
+                  <span class="flex items-center gap-2 cursor-pointer"
+                    >Status <img src="./assets/img/sorting.svg" alt=""
+                  /></span>
+                </th>
+                <th>
+                  <span class="flex items-center gap-2 cursor-pointer"
+                    >Action <img src="./assets/img/sorting.svg" alt=""
+                  /></span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2/25/2023</td>
+                <td>Riannon Cluse</td>
+                <td>
+                  <p
+                    class="border-[.5px] w-[77px] text-center h-[30px] border-[#18A12E] flex items-center justify-center rounded-lg bg-[#0097181A] text-[#18A12E] text-xs"
+                  >
+                    Active
+                  </p>
+                </td>
+                <td>
+                  <img
+                    src="./assets/img/edit.png"
+                    class="w-7 h-7 object-contain cursor-pointer"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>10/25/2023</td>
+                <td>Prince Cluse</td>
+                <td>
+                  <p
+                    class="border-[.5px] w-[77px] text-center h-[30px] border-[#FE0000] flex items-center justify-center rounded-lg bg-[#FF00001A] text-[#FE0000] text-xs"
+                  >
+                    Inactive
+                  </p>
+                </td>
+                <td>
+                  <img
+                    src="./assets/img/edit.png"
+                    class="w-7 h-7 object-contain cursor-pointer"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>6/15/2023</td>
+                <td>John Doe</td>
+                <td>
+                  <p
+                    class="border-[.5px] w-[77px] text-center h-[30px] border-[#18A12E] flex items-center justify-center rounded-lg bg-[#0097181A] text-[#18A12E] text-xs"
+                  >
+                    Active
+                  </p>
+                </td>
+                <td>
+                  <img
+                    src="./assets/img/edit.png"
+                    class="w-7 h-7 object-contain cursor-pointer"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>9/1/2023</td>
+                <td>Jane Smith</td>
+                <td>
+                  <p
+                    class="border-[.5px] w-[77px] text-center h-[30px] border-[#FE0000] flex items-center justify-center rounded-lg bg-[#FF00001A] text-[#FE0000] text-xs"
+                  >
+                    Inactive
+                  </p>
+                </td>
+                <td>
+                  <img
+                    src="./assets/img/edit.png"
+                    class="w-7 h-7 object-contain cursor-pointer"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>3/10/2023</td>
+                <td>Michael Johnson</td>
+                <td>
+                  <p
+                    class="border-[.5px] w-[77px] text-center h-[30px] border-[#18A12E] flex items-center justify-center rounded-lg bg-[#0097181A] text-[#18A12E] text-xs"
+                  >
+                    Active
+                  </p>
+                </td>
+                <td>
+                  <img
+                    src="./assets/img/edit.png"
+                    class="w-7 h-7 object-contain cursor-pointer"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>7/8/2023</td>
+                <td>Sarah Thompson</td>
+                <td>
+                  <p
+                    class="border-[.5px] w-[77px] text-center h-[30px] border-[#18A12E] flex items-center justify-center rounded-lg bg-[#0097181A] text-[#18A12E] text-xs"
+                  >
+                    Active
+                  </p>
+                </td>
+                <td>
+                  <img
+                    src="./assets/img/edit.png"
+                    class="w-7 h-7 object-contain cursor-pointer"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>12/5/2023</td>
+                <td>Alice Brown</td>
+                <td>
+                  <p
+                    class="border-[.5px] w-[77px] text-center h-[30px] border-[#FE0000] flex items-center justify-center rounded-lg bg-[#FF00001A] text-[#FE0000] text-xs"
+                  >
+                    Inactive
+                  </p>
+                </td>
+                <td>
+                  <img
+                    src="./assets/img/edit.png"
+                    class="w-7 h-7 object-contain cursor-pointer"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>8/20/2023</td>
+                <td>David Wilson</td>
+                <td>
+                  <p
+                    class="border-[.5px] w-[77px] text-center h-[30px] border-[#18A12E] flex items-center justify-center rounded-lg bg-[#0097181A] text-[#18A12E] text-xs"
+                  >
+                    Active
+                  </p>
+                </td>
+                <td>
+                  <img
+                    src="./assets/img/edit.png"
+                    class="w-7 h-7 object-contain cursor-pointer"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>4/17/2023</td>
+                <td>Emily Davis</td>
+                <td>
+                  <p
+                    class="border-[.5px] w-[77px] text-center h-[30px] border-[#18A12E] flex items-center justify-center rounded-lg bg-[#0097181A] text-[#18A12E] text-xs"
+                  >
+                    Active
+                  </p>
+                </td>
+                <td>
+                  <img
+                    src="./assets/img/edit.png"
+                    class="w-7 h-7 object-contain cursor-pointer"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>11/30/2023</td>
+                <td>Oliver White</td>
+                <td>
+                  <p
+                    class="border-[.5px] w-[77px] text-center h-[30px] border-[#18A12E] flex items-center justify-center rounded-lg bg-[#0097181A] text-[#18A12E] text-xs"
+                  >
+                    Active
+                  </p>
+                </td>
+                <td>
+                  <img
+                    src="./assets/img/edit.png"
+                    class="w-7 h-7 object-contain cursor-pointer"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>2/25/2023</td>
+                <td>Riannon Cluse</td>
+                <td>
+                  <p
+                    class="border-[.5px] w-[77px] text-center h-[30px] border-[#18A12E] flex items-center justify-center rounded-lg bg-[#0097181A] text-[#18A12E] text-xs"
+                  >
+                    Active
+                  </p>
+                </td>
+                <td>
+                  <img
+                    src="./assets/img/edit.png"
+                    class="w-7 h-7 object-contain cursor-pointer"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>10/25/2023</td>
+                <td>Prince Cluse</td>
+                <td>
+                  <p
+                    class="border-[.5px] w-[77px] text-center h-[30px] border-[#FE0000] flex items-center justify-center rounded-lg bg-[#FF00001A] text-[#FE0000] text-xs"
+                  >
+                    Inactive
+                  </p>
+                </td>
+                <td>
+                  <img
+                    src="./assets/img/edit.png"
+                    class="w-7 h-7 object-contain cursor-pointer"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>6/15/2023</td>
+                <td>John Doe</td>
+                <td>
+                  <p
+                    class="border-[.5px] w-[77px] text-center h-[30px] border-[#18A12E] flex items-center justify-center rounded-lg bg-[#0097181A] text-[#18A12E] text-xs"
+                  >
+                    Active
+                  </p>
+                </td>
+                <td>
+                  <img
+                    src="./assets/img/edit.png"
+                    class="w-7 h-7 object-contain cursor-pointer"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>9/1/2023</td>
+                <td>Jane Smith</td>
+                <td>
+                  <p
+                    class="border-[.5px] w-[77px] text-center h-[30px] border-[#FE0000] flex items-center justify-center rounded-lg bg-[#FF00001A] text-[#FE0000] text-xs"
+                  >
+                    Inactive
+                  </p>
+                </td>
+                <td>
+                  <img
+                    src="./assets/img/edit.png"
+                    class="w-7 h-7 object-contain cursor-pointer"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>3/10/2023</td>
+                <td>Michael Johnson</td>
+                <td>
+                  <p
+                    class="border-[.5px] w-[77px] text-center h-[30px] border-[#18A12E] flex items-center justify-center rounded-lg bg-[#0097181A] text-[#18A12E] text-xs"
+                  >
+                    Active
+                  </p>
+                </td>
+                <td>
+                  <img
+                    src="./assets/img/edit.png"
+                    class="w-7 h-7 object-contain cursor-pointer"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>7/8/2023</td>
+                <td>Sarah Thompson</td>
+                <td>
+                  <p
+                    class="border-[.5px] w-[77px] text-center h-[30px] border-[#18A12E] flex items-center justify-center rounded-lg bg-[#0097181A] text-[#18A12E] text-xs"
+                  >
+                    Active
+                  </p>
+                </td>
+                <td>
+                  <img
+                    src="./assets/img/edit.png"
+                    class="w-7 h-7 object-contain cursor-pointer"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>12/5/2023</td>
+                <td>Alice Brown</td>
+                <td>
+                  <p
+                    class="border-[.5px] w-[77px] text-center h-[30px] border-[#FE0000] flex items-center justify-center rounded-lg bg-[#FF00001A] text-[#FE0000] text-xs"
+                  >
+                    Inactive
+                  </p>
+                </td>
+                <td>
+                  <img
+                    src="./assets/img/edit.png"
+                    class="w-7 h-7 object-contain cursor-pointer"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>8/20/2023</td>
+                <td>David Wilson</td>
+                <td>
+                  <p
+                    class="border-[.5px] w-[77px] text-center h-[30px] border-[#18A12E] flex items-center justify-center rounded-lg bg-[#0097181A] text-[#18A12E] text-xs"
+                  >
+                    Active
+                  </p>
+                </td>
+                <td>
+                  <img
+                    src="./assets/img/edit.png"
+                    class="w-7 h-7 object-contain cursor-pointer"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>4/17/2023</td>
+                <td>Emily Davis</td>
+                <td>
+                  <p
+                    class="border-[.5px] w-[77px] text-center h-[30px] border-[#18A12E] flex items-center justify-center rounded-lg bg-[#0097181A] text-[#18A12E] text-xs"
+                  >
+                    Active
+                  </p>
+                </td>
+                <td>
+                  <img
+                    src="./assets/img/edit.png"
+                    class="w-7 h-7 object-contain cursor-pointer"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>11/30/2023</td>
+                <td>Oliver White</td>
+                <td>
+                  <p
+                    class="border-[.5px] w-[77px] text-center h-[30px] border-[#18A12E] flex items-center justify-center rounded-lg bg-[#0097181A] text-[#18A12E] text-xs"
+                  >
+                    Active
+                  </p>
+                </td>
+                <td>
+                  <img
+                    src="./assets/img/edit.png"
+                    class="w-7 h-7 object-contain cursor-pointer"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tailwindcss Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          theme: {
+            extends: {
+              screens: {
+                sm: "640px",
+                // => @media (min-width: 640px) { ... }
+
+                md: "768px",
+                // => @media (min-width: 768px) { ... }
+
+                lg: "1024px",
+                // => @media (min-width: 1024px) { ... }
+
+                xl: "1280px",
+                // => @media (min-width: 1280px) { ... }
+
+                "2xl": "1536px",
+                // => @media (min-width: 1536px) { ... }
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <!-- JS File -->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
