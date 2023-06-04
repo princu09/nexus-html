@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page - Nexus</title>
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/js/tailwind.config.js"></script>
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Jquery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    
+  </head>
+  <body>
+    <!-- #006169 -->
+    <div class="flex w-full h-full">
+      <!-- Sidebar -->
+      <div
+        class="sidebar bg-[#006169] min-h-screen w-[350px] hidden lg:flex flex-col items-center pt-10 p-5"
+      >
+        <img
+          src="./assets/img/logo.svg"
+          class="w-20 h-20 block object-contain"
+          alt=""
+        />
+        <div class="mt-5 w-full">
+          <select
+            name=""
+            id=""
+            class="w-full p-2 rounded-md focus:outline-none"
+          >
+            <option>Select a category</option>
+            <option>Data One</option>
+            <option>Data Two</option>
+          </select>
+          <button
+            class="text-white h-14 w-full font-bold text-sm rounded-xl mt-9 focus:outline-none border border-white transition-all duration-300 flex items-center gap-4 px-5"
+            style="
+              background: linear-gradient(180deg, #006169 0%, #0f97d7 100%);
+            "
+          >
+            <img src="./assets/img/activity_icon.svg" alt="" />
+            KPIS
+          </button>
+
+          <button
+            class="text-white h-14 w-full font-bold text-sm rounded-xl mt-9 focus:outline-none transition-all duration-300 flex items-center gap-4 px-5"
+          >
+            <img src="./assets/img/chart.svg" alt="" />
+            Administrator
+          </button>
+        </div>
+      </div>
+      <!-- Main Content -->
+      <div class="w-full bg-[#F5F5F5]">
+        <!-- Navbar -->
+        <div
+          class="bg-[#006169] w-full h-20 flex items-center justify-between px-5 lg:border-l border-white"
+        >
+          <!-- Name and Desc  -->
+          <div class="">
+            <p class="text-white font-bold text-2xl">John Doe</p>
+            <p class="hidden lg:block text-sm text-[#CDCDCD]">
+              Let’s check your store today
+            </p>
+          </div>
+          <!-- Right Div -->
+          <div class="flex items-center gap-5">
+            <div class="hidden lg:flex items-center relative">
+              <img
+                src="./assets/img/search.svg"
+                class="absolute left-2"
+                alt=""
+              />
+              <input
+                type="text"
+                class="h-12 w-[300px] rounded-lg placeholder:text-[#333] pl-10 focus:outline-none"
+                placeholder="Search..."
+              />
+            </div>
+            <div class="hidden lg:flex items-center gap-5">
+              <img
+                src="./assets/img/email.png"
+                alt=""
+                class="w-10 h-10 block object-contain rounded-full"
+              />
+
+              <img
+                src="./assets/img/bell.png"
+                alt=""
+                class="w-10 h-10 block object-contain rounded-full"
+              />
+            </div>
+            <!-- Image Box -->
+            <div
+              class="flex items-center gap-5 lg:border-l border-white pl-[43px]"
+            >
+              <img
+                src="assets/img/user.png"
+                alt=""
+                class="w-10 h-10 block object-contain"
+              />
+              <div class="">
+                <p class="text-white font-bold text-sm">John Doe</p>
+                <p class="text-xs text-[#CDCDCD]">KATRING</p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="bg-white w-10 h-10 rounded-md block lg:hidden"
+            id="menu"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Main Content -->
+
+        <div class="p-5">
+          <div class="bg-white p-6 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <p class="text-2xl font-semibold">Reports</p>
+              <img src="./assets/img/report.svg" alt="" />
+            </div>
+            <div class="">
+              <select
+                name=""
+                id=""
+                class="border w-full p-2 rounded-md focus:outline-none"
+              >
+                <option>Select a category</option>
+                <option>Data One</option>
+                <option>Data Two</option>
+              </select>
+            </div>
+          </div>
+          <div class="bg-white p-6 mt-8 grid grid-cols-1 lg:grid-cols-3 gap-5">
+            <div class="">
+              <p class="text-2xl font-semibold">Demo here</p>
+              <div
+                class="h-[368px] w-full flex items-center justify-center shadow-lg mt-5"
+              >
+                <img src="./assets/img/dole.png" alt="" class="" />
+              </div>
+            </div>
+            <div class="">
+              <p class="text-2xl font-semibold">Date range Filter</p>
+            </div>
+            <div class="hidden lg:block">
+              <img src="./assets/img/calendar.svg" alt="" class="lg:ml-auto" />
+            </div>
+          </div>
+          <div class="mt-5">
+            <p class="text-2xl font-semibold">Weekly Reports</p>
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-10 mt-5">
+              <div
+                class="bg-[#fafafa] h-[182px] rounded-lg p-[24px] flex flex-col justify-between"
+              >
+                <div
+                  class="bg-white w-12 h-12 rounded-2xl text-3xl flex items-center justify-center"
+                >
+                  <i
+                    class="fa-solid fa-file"
+                    style="color: #130f26; opacity: 0.6"
+                  ></i>
+                </div>
+                <div class="">
+                  <p class="mb-2 text-sm text-[#64748B]">Lorem Ipsum</p>
+                  <p class="text-[#1E293B] font-semibold text-3xl">345</p>
+                </div>
+              </div>
+              <div
+                class="bg-[#fafafa] h-[182px] rounded-lg p-[24px] flex flex-col justify-between"
+              >
+                <div
+                  class="bg-white w-12 h-12 rounded-2xl text-3xl flex items-center justify-center"
+                >
+                  <i
+                    class="fa-solid fa-file"
+                    style="color: #130f26; opacity: 0.6"
+                  ></i>
+                </div>
+                <div class="">
+                  <p class="mb-2 text-sm text-[#64748B]">Lorem Ipsum</p>
+                  <p class="text-[#1E293B] font-semibold text-3xl">345</p>
+                </div>
+              </div>
+              <div
+                class="bg-[#fafafa] h-[182px] rounded-lg p-[24px] flex flex-col justify-between"
+              >
+                <div
+                  class="bg-white w-12 h-12 rounded-2xl text-3xl flex items-center justify-center"
+                >
+                  <i
+                    class="fa-solid fa-file"
+                    style="color: #130f26; opacity: 0.6"
+                  ></i>
+                </div>
+                <div class="">
+                  <p class="mb-2 text-sm text-[#64748B]">Lorem Ipsum</p>
+                  <p class="text-[#1E293B] font-semibold text-3xl">345</p>
+                </div>
+              </div>
+              <div
+                class="bg-[#fafafa] h-[182px] rounded-lg p-[24px] flex flex-col justify-between"
+              >
+                <div
+                  class="bg-white w-12 h-12 rounded-2xl text-3xl flex items-center justify-center"
+                >
+                  <i
+                    class="fa-solid fa-file"
+                    style="color: #130f26; opacity: 0.6"
+                  ></i>
+                </div>
+                <div class="">
+                  <p class="mb-2 text-sm text-[#64748B]">Lorem Ipsum</p>
+                  <p class="text-[#1E293B] font-semibold text-3xl">345</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tailwindcss Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          theme: {
+            extends: {
+              screens: {
+                sm: "640px",
+                // => @media (min-width: 640px) { ... }
+
+                md: "768px",
+                // => @media (min-width: 768px) { ... }
+
+                lg: "1024px",
+                // => @media (min-width: 1024px) { ... }
+
+                xl: "1280px",
+                // => @media (min-width: 1280px) { ... }
+
+                "2xl": "1536px",
+                // => @media (min-width: 1536px) { ... }
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <!-- JS File -->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

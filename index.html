@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus</title>
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/js/tailwind.config.js"></script>
+  </head>
+  <body>
+    <div
+      class="main-content min-h-screen h-full flex flex-col justify-center items-center"
+      style="background: linear-gradient(180deg, #006169 0%, #0f97d7 100%)"
+    >
+      <img
+        src="./assets/img/logo.svg"
+        class="w-[150px] h-[150px] block object-contain"
+        alt=""
+      />
+      <div
+        class="bg-white p-5 min-w-[300px] sm:min-w-[350px] lg:p-[40px] lg:px-[55px] mt-10 rounded-2xl"
+      >
+        <p class="font-medium text-3xl text-center mb-10">Welcome back</p>
+        <div class="flex flex-col gap-2">
+          <label for="" class="text-[#2B3241] text-sm">Email</label>
+          <input
+            type="text"
+            class="w-full lg:w-[300px] border border-[#AAB3C3] h-12 placeholder:text-[#AAB3C3] px-2 focus:outline-none rounded-lg text-black"
+            placeholder="name@email.com"
+          />
+        </div>
+        <div class="flex flex-col gap-2 mt-5">
+          <label for="" class="text-[#2B3241] text-sm">Password</label>
+          <input
+            type="password"
+            class="w-full lg:w-[300px] border border-[#AAB3C3] h-12 placeholder:text-[#AAB3C3] px-2 focus:outline-none rounded-lg text-black"
+            placeholder="* * * * * *"
+          />
+        </div>
+        <p class="text-sm text-[#5E677C] text-end mt-5">Forgot password?</p>
+        <button
+          class="h-14 bg-[#F4F5F6] w-full rounded-md mt-3 text-sm text-[#AAB3C3] hover:bg-[#017DB7] hover:text-white transition-all duration-300"
+        >
+          Continue
+        </button>
+      </div>
+      <p class="mt-5 text-[#FFFFFF] text-sm">Don't have an account yet? Sign up for free</p>
+    </div>
+
+    <!-- Tailwindcss Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          theme: {
+            extends: {
+              screens: {
+                sm: "640px",
+                // => @media (min-width: 640px) { ... }
+
+                md: "768px",
+                // => @media (min-width: 768px) { ... }
+
+                lg: "1024px",
+                // => @media (min-width: 1024px) { ... }
+
+                xl: "1280px",
+                // => @media (min-width: 1280px) { ... }
+
+                "2xl": "1536px",
+                // => @media (min-width: 1536px) { ... }
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <!-- JS File -->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
